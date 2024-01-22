@@ -1,4 +1,4 @@
-import Route from ".Route.js";
+import Route from "./Route.js";
 import { allRoutes, websiteName } from "./allRoutes.js";
 
 // Création d'une route pour la page 404 (page introuvable)
@@ -19,11 +19,11 @@ return currentRoute;
 } else {
     return route404;
 }
-};
+}
 
 // Fontion pour changer le contenu de la page
 const LoadContentPage = async ( ) => {
-const path = windows. location.pathname;
+const path = window.location.pathname;
 // Récuperation de lURL actuelle
 const actualRoute = getRouteByUrl (path);
 // Récuperation du contenu HTML de la route
@@ -39,12 +39,12 @@ if (actualRoute.pathJS != "") {
   scriptTag.setAttribute("src", actualRoute.pathJS);
 
   // Ajout de la balise script au corps du document
-  document.querySelector("body").appendChild(scriptTag); 
+  document.body.appendChild(scriptTag); 
 }
 
  // Changement du titre de la page
  document.title = actualRoute.title + " - " + websiteName;
-};
+}
 
 // Fonction pour gérer les événements de routage (clic sur les liens)
 const routeEvent = (event) => {
@@ -54,7 +54,7 @@ event.preventDefault();
 window.history.pushState({}, "'", event.target.href);
 // Chargement du contenu de la nouvelle page
 LoadContentPage ();
-} ;
+} 
     
 // Gestion de l'événement de retour en arrière dans l'historique du navigateur
 window.onpopstate = LoadContentPage;
