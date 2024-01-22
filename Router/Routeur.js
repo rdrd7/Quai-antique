@@ -19,15 +19,15 @@ return currentRoute;
 } else {
     return route404;
 }
-}
+};
 
-// Fontion pour changer le contenu de la page
+// Fontion pour charger le contenu de la page
 const LoadContentPage = async ( ) => {
 const path = window.location.pathname;
 // Récuperation de lURL actuelle
 const actualRoute = getRouteByUrl (path);
 // Récuperation du contenu HTML de la route
-const html = await fetch(actualRoute.pathHtml) . then((date) => data.text());
+const html = await fetch(actualRoute.pathHtml) .then((date) => data.text());
 // Ajout du contenu HTML à l'élément avec l'ID "main-page"
 document.getElementById ("main-page").innerHTML = html;
 
@@ -39,7 +39,7 @@ if (actualRoute.pathJS != "") {
   scriptTag.setAttribute("src", actualRoute.pathJS);
 
   // Ajout de la balise script au corps du document
-  document.body.appendChild(scriptTag); 
+  document.querySelector("body").appendChild(scriptTag); 
 }
 
  // Changement du titre de la page
@@ -48,7 +48,7 @@ if (actualRoute.pathJS != "") {
 
 // Fonction pour gérer les événements de routage (clic sur les liens)
 const routeEvent = (event) => {
-event = event || windows.event ;
+event = event || window.event;
 event.preventDefault();
 // Mise à jour de l'URL dans l'historique du navigateur
 window.history.pushState({}, "'", event.target.href);
