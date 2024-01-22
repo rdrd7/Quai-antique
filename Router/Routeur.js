@@ -27,7 +27,7 @@ const path = window.location.pathname;
 // Récuperation de lURL actuelle
 const actualRoute = getRouteByUrl (path);
 // Récuperation du contenu HTML de la route
-const html = await fetch(actualRoute.pathHtml) .then((date) => data.text());
+const html = await fetch(actualRoute.pathHtml) .then((data) => data.text());
 // Ajout du contenu HTML à l'élément avec l'ID "main-page"
 document.getElementById ("main-page").innerHTML = html;
 
