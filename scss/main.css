@@ -12020,4 +12020,8 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.text-justify {
+  text-align: justify;
 }/*# sourceMappingURL=main.css.map */
