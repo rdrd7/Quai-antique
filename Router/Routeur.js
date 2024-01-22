@@ -39,7 +39,7 @@ if (actualRoute.pathJS != "") {
   scriptTag.setAttribute("src", actualRoute.pathJS);
 
   // Ajout de la balise script au corps du document
-  document,querySelector("body").appendChild(scriptTag);
+  document.querySelector("body").appendChild(scriptTag); 
 }
 
  // Changement du titre de la page
