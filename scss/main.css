@@ -11983,12 +11983,12 @@ html {
 }
 
 main {
-  margin-bottom: 250;
+  margin-bottom: 270px;
 }
 
 footer.footer {
   padding: 15px;
-  position: relative;
+  position: absolute;
   bottom: 0;
   width: 100%;
 }
@@ -12000,6 +12000,7 @@ p {
 
 .platter-scene {
   position: relative;
+  margin-bottom: 15px;
 }
 .platter-scene::before {
   content: "";
@@ -12046,4 +12047,8 @@ p {
   transform: translate(-50%, -50%);
   opacity: 0;
   transition: all 0.3s;
+}
+
+.form-label {
+  color: #906427;
 }/*# sourceMappingURL=main.css.map */
