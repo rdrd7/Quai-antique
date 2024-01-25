@@ -7,23 +7,46 @@
  <div class="container text-center pb-3">
     <a href="/reserver" class="btn btn-primary">Réserver</a>
 </div>
-<div class="container text-center allreservations">
+<div class="container text-center allreservations" >
     <a href="#">
         <span>12/05/2023</span> | 
         <span>12:10</span> | 
         <span>5 personnes</span> | 
         <span>Pas d’allergie</span> 
     </a>
+    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#DeleteReservationModal" style="padding: 5px;">Supprimer</button>
     <a href="#">
         <span>12/05/2023</span> | 
         <span>12:10</span> | 
         <span>5 personnes</span> | 
         <span>Pas d’allergie</span> 
     </a>
+    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#DeleteReservationModal" style="padding: 5px;">Supprimer</button>
     <a href="#">
         <span>12/05/2023</span> | 
         <span>12:10</span> | 
         <span>5 personnes</span> | 
         <span>Pas d’allergie</span> 
     </a>
+    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#DeleteReservationModal" style="padding: 5px;">Supprimer</button>
 </div>
+
+<!-- Modal suppression -->
+<div class="modal fade" id="DeleteReservationModal" tabindex="-1" aria-labelledby="DeleteReservationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="DeleteReservationModal" style="color: black;">Êtes-vous sûr de vouloir supprimer cette réservation ?</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="text-center">
+                    <button type="button" class="btn btn-danger">Oui</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Non</button>
+                </div>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
