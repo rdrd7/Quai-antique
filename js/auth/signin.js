@@ -1,21 +1,19 @@
 const mailInput = document.getElementById("EmailInput");
-const passwordInput = document.getElementById("passwordInput");
+const passwordInput = document.getElementById("PasswordInput");
 const btnSingin = document.getElementById("btnSignin");
 
-btnSingin.addEventListener("click", checkCredentials);
+btnSingin.addEventListener("click",checkCredentials);
 
 function checkCredentials(){
-    //Ici, il faudra appeler l'API pour vérifier les credentials en BDD
-    
-    if(mailInput.value == "test@gmail.com" && passwordInput.value == "123"){
-        alert("Vous êtes connecter");
-        
+    //ici, il faudra appeler l'API pour verifier les credentials en BDD
+    if(mailInput.value == "test@mail.com" && passwordInput.value == "123"){
+        alert("vous ete connecté");
+
         //Il faudra récupérer le vrai token
-        const token = "lkjsdngfljsqdnglkjsdbglkjqskjgkfjgbqslkfdgbskldfgdfgsdgf";
-        setToken(token);
+        const token = "zdopkkzaodpjzapoefjazpoefjpofjpojfp";
+
         //placer ce token en cookie
 
-        
         window.location.replace("/");
     }
     else{
@@ -23,3 +21,4 @@ function checkCredentials(){
         passwordInput.classList.add("is-invalid");
     }
 }
+
