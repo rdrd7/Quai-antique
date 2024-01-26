@@ -63,6 +63,12 @@ connected ( admin ou client )
     -client
 */
 function showAndHideElementsForRoles(){
+    
+        const loader = document.getElementById("loader");
+        loader.style.display = "block"; // Afficher le loader
+    
+    
+    
     const userConnected = isConnected();
     const role = getRole();
 
@@ -92,4 +98,8 @@ function showAndHideElementsForRoles(){
                 break;
         }
     })
+    
+    loader.style.display = "none"; // Masquer le loader
+    
+    
 }
