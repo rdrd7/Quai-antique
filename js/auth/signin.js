@@ -6,12 +6,11 @@ btnSingin.addEventListener("click",checkCredentials);
 
 function checkCredentials(){
     //ici, il faudra appeler l'API pour verifier les credentials en BDD
+    
     if(mailInput.value == "test@mail.com" && passwordInput.value == "123"){
-        alert("vous ete connecté");
-
         //Il faudra récupérer le vrai token
         const token = "zdopkkzaodpjzapoefjazpoefjpofjpojfp";
-
+        setToken(token);
         //placer ce token en cookie
 
         window.location.replace("/");
